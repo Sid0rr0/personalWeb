@@ -11,6 +11,22 @@ class App extends React.Component {
     this.state = {
       todos: todosData
     }
+    this.handleChange = this.handleChange.bind(this)
+  }
+
+  handleChange(id) {
+     this.setState(prevState => {
+      const updatedTodos = prevState.todos.map(todo => {
+        if(todo.id === id) {
+          todo.completed = !todo.completed
+        }
+        return todo
+      })
+
+      return {
+        todos: updatedTodos
+      }
+    })
   }
   
   date() {
@@ -36,8 +52,13 @@ class App extends React.Component {
   }
 
   render() {
-    const data = this.state.todos.map(todo => <TodoItem key={todo.id} item={todo} />)
+    const data = this.state.todos.map(todo => <TodoItem  
+      key={todo.id} 
+      item={todo}
+      handleChange={this.handleChange} 
+    />)
     const [styles, timeOfDay] = this.date()
+
     return (
       <div className="todo-list">
         <h1 style={styles}>Good {timeOfDay}!</h1>
