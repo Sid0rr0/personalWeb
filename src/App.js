@@ -42,13 +42,16 @@ class App extends React.Component {
     
     if (hours < 12) {
       timeOfDay = "morning"
-      styles.color = "#04756F"
+      styles.color = "light blue"
     } else if (hours >= 12 && hours < 17) {
       timeOfDay = "afternoon"
-      styles.color = "#8914A3"
+      styles.color = "green"
+    } else if (hours >= 17 && hours < 23) {
+      timeOfDay = "evening"
+      styles.color = "orange"
     } else {
       timeOfDay = "night"
-      styles.color = "#D90000"
+      styles.color = "yellow"
     }
 
     return [styles, timeOfDay]
