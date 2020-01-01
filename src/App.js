@@ -2,6 +2,7 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import TodoItem from './components/TodoItem'
+import Greetings from './components/Greetings'
 import todosData from './data/todosData'
 
 class App extends React.Component {
@@ -32,30 +33,7 @@ class App extends React.Component {
     })
   }
   
-  date() {
-    const date = new Date()
-    const hours = date.getHours()
-    let timeOfDay
-    const styles = {
-      fontSize: 30
-    }
-    
-    if (hours < 12) {
-      timeOfDay = "morning"
-      styles.color = "lightblue"
-    } else if (hours >= 12 && hours < 17) {
-      timeOfDay = "afternoon"
-      styles.color = "green"
-    } else if (hours >= 17 && hours < 23) {
-      timeOfDay = "evening"
-      styles.color = "orange"
-    } else {
-      timeOfDay = "night"
-      styles.color = "yellow"
-    }
-
-    return [styles, timeOfDay]
-  }
+  
 
   render() {
     const data = this.state.todos.map(todo => <TodoItem  
@@ -63,12 +41,11 @@ class App extends React.Component {
       item={todo}
       handleChange={this.handleChange} 
     />)
-    const [styles, timeOfDay] = this.date()
+    
 
     return (
       <div className="todo-list">
-        <h1 style={styles}>Good {timeOfDay}!</h1>
-
+        <Greetings />
         {data}
       
       </div>
