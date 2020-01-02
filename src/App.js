@@ -1,57 +1,20 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
-import TodoItem from './components/TodoItem'
-import Greetings from './components/Greetings'
-import todosData from './data/todosData'
+import TodoList from './components/TodoList'
+import MemeGenerator from './components/MemeGenerator'
+import Home from './components/Home'
+import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
 
-class App extends React.Component {
-
-  constructor() {
-    super()
-    this.state = {
-      todos: todosData
-    }
-    this.handleChange = this.handleChange.bind(this)
-  }
-
-  handleChange(id) {
-     this.setState(prevState => {
-      const updatedTodos = prevState.todos.map(todo => {
-        if(todo.id === id) {
-          return {
-            ...todo,
-            completed: !todo.completed
-          }
-        }
-        return todo
-      })
-
-      return {
-        todos: updatedTodos
-      }
-    })
-  }
-  
-  
-
-  render() {
-    const data = this.state.todos.map(todo => <TodoItem  
-      key={todo.id} 
-      item={todo}
-      handleChange={this.handleChange} 
-    />)
-    
-
-    return (
-      <div className="todo-list">
-        <Greetings />
-        {data}
-      
-      </div>
-    );
-  }
-  
+function App() {
+  return (
+    <Router>
+      <Switch>
+        <Route path='/' exact component={Home}/>
+        <Route path='/TodoList' component={TodoList}/>
+        <Route path='/MemeGenerator' component={MemeGenerator}/>
+      </Switch>
+    </Router>
+  );
 }
 
 export default App;
