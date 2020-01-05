@@ -2,6 +2,7 @@ import React from 'react';
 import TodoItem from './TodoItem'
 import Greetings from './Greetings'
 import todosData from '../data/todosData'
+import { Link } from 'react-router-dom';
 
 
 class TodoList extends React.Component {
@@ -41,9 +42,12 @@ class TodoList extends React.Component {
     
 
     return (
-        <div className="todo-list">
-          <Greetings />
-          {data}
+        <div>
+          <Link to='/'>Back to Home</Link>
+          <div className="todo-list">
+            <Greetings />
+            {data}
+          </div>
         </div>
     );
   }

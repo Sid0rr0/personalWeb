@@ -1,6 +1,7 @@
 import React, {Component} from "react"
 import Header from "./Header"
 import "../css/MemeGenerator.css"
+import { Link } from "react-router-dom"
 
 class MemeGenerator extends Component {
     constructor() {
@@ -40,6 +41,7 @@ class MemeGenerator extends Component {
         return (
             <div>
                 <Header />
+                <Link to='/'>Back to Home</Link>
                 <form className="meme-form" onSubmit={this.handleSubmit}>
                     <input 
                         type="text"
