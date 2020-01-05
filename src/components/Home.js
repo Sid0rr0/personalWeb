@@ -15,7 +15,7 @@ function Home() {
                 </div>
             </section>
             <section className="grid-area photo">
-                <div className="circle"> </div>
+                <Link to='/nudes'><div className="circle"> </div></Link>
             </section>
             <section className="grid-area skills">
                 <div className="centred-wrapper">

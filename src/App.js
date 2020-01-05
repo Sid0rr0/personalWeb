@@ -12,7 +12,7 @@ function App() {
         <Route path='/' exact component={Home}/>
         <Route path='/TodoList' component={TodoList}/>
         <Route path='/MemeGenerator' component={MemeGenerator}/>
-        <Route path='/TrustMe' component={() => { 
+        <Route path='/nudes' component={() => { 
             window.location.href = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ'; 
             return null;
         }}/>
