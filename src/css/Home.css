@@ -1,29 +1,29 @@
+.wrapper {
+    padding        : 0;
+    display        : flex;
+    flex-direction : row;
+    justify-content: space-evenly;
+}
+
 .resume {
     margin-top: 15px;
     display: grid;
     width  : 40vw;
     height: 95vh;
     grid-template-columns: 2fr 1fr;
-    grid-template-rows   : 1fr 1fr 1fr 1fr;
+    grid-template-rows   : 1fr 3fr 3fr 2fr;
     box-shadow           : 0 5px 9px 0 rgba(0, 0, 0, 0.35);
     grid-gap             : 5px;
     grid-template-areas  :
         "name  photo"
-        "work  about"
+        "work  skills"
         "work  education"
-        "community  skills";
-}
-
-.circle {
-    border       : 1px solid black;
-    height       : 200px;
-    width        : 200px;
-    border-radius: 50%;
+        "community  about";
 }
 
 .grid-area {
-    padding: 1em 1em 1em 1em;
     border : 1px black solid;
+    align-items: center;
 }
 
 .name {
@@ -54,9 +54,40 @@
     grid-area: community;
 }
 
-.wrapper {
-    padding        : 0;
-    display        : flex;
-    flex-direction : row;
-    justify-content: space-evenly;
+.centred-wrapper {
+    height: 100%;
+    width: 100%;
+    text-align: center;
+}
+
+.centred > h3 {
+    margin-top: 0;
+}
+
+.centred-wrapper:before {
+    content: '';
+    display: inline-block;
+    height: 100%; 
+    vertical-align: middle;
+}
+
+.centred {
+    padding: 5px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.circle {
+    border       : 1px solid black;
+    height       : 100px;
+    width        : 100px;
+    border-radius: 50%;
+    margin: auto;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
 }
