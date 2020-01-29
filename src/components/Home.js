@@ -20,29 +20,36 @@ function Home() {
             <section className="grid-area skills">
                 <div className="centred-wrapper">
                     <div className="centred">
-                        <h3>Skills</h3>
-                        <ul className="skill_list">
-                            <li>HTML5 and CSS3</li>
-                            <li>Javascript (ES6)</li>
-                            <li>React</li>
-                            <li>SQL</li>
-                            <li>PHP</li>
-                            <li>C, C++</li>
-                            <li>Git</li>
-                        </ul>
+                    <h2>Work</h2>
+                        Junior Software Developer at <a href="https://unicorn.com/cs/">Unicorn</a> <br/>
+                        (Java, React <br /> 6/2019 - 8/2019)
+                        <hr />
+                        <h4>React micro-projects:</h4>
+                        <Link to='/MemeGenerator'> Meme Generator </Link> <br/>
+                        <Link to='/TodoList'> TodoList </Link>
                     </div>
                 </div>
             </section>
             <section className="grid-area work">
             <div className="centred-wrapper">
                     <div className="centred">
-                        <h2>Work</h2>
-                        Junior Software Developer at <a href="https://unicorn.com/cs/">Unicorn</a> <br/>
-                        (Hatchery 6/2019 - 8/2019)
-                        <hr /> <br />
-                        <h4>React micro-projects:</h4>
-                        <Link to='/MemeGenerator'> Meme Generator </Link> <br/>
-                        <Link to='/TodoList'> TodoList </Link>
+                    <h3>Skills</h3>
+                        <ul className="skill_list">
+                            <li>HTML5 and CSS3</li>
+                            <li>Javascript (ES6)</li>
+                            <li>SQL</li>
+                            <li>PHP</li>
+                            <li>C, C++</li>
+                            <li>Git</li>
+                            <hr />
+                            <li>Basics of:</li>
+                            <li>React, Hooks</li>
+                            <li>Redux</li>
+                            <li>Vue</li>
+                            <li>Typescript</li>
+                            <li>Laravel</li>
+                        </ul>
+                        
                     </div>
                 </div>
             </section>
